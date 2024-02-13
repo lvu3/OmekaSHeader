@@ -1,0 +1,28 @@
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1em 2em;
+    background-color:#00205B;
+}
+
+.header-top .university-logo{
+    width:300px;
+}
+
+.header-top .site-heading {
+    color: white;
+    font-family: proxima-nova,sans-serif;
+    font-weight:600;
+    text-align: right;
+    font-size:1.2em;
+}
+.header-top .site-heading:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:550px) {
+    .header-top .site-heading {
+        font-size:1em;
+    }
+}
