@@ -1,28 +1,109 @@
-.header-top {
+.header-top .university-logo {
+    padding: 1em 0 0.8em 1.875rem;
+}
+
+.header-top .blue-navbar {
+    background-color: #00205b;
+    padding:1rem 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding:1em 2em;
-    background-color:#00205B;
+    align-items: center;
 }
 
-.header-top .university-logo{
-    width:300px;
-}
-
-.header-top .site-heading {
+.header-top .blue-navbar .site-heading {
     color: white;
-    font-family: proxima-nova,sans-serif;
-    font-weight:600;
-    text-align: right;
-    font-size:1.2em;
-}
-.header-top .site-heading:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    padding-left: 1.875rem;
 }
 
-@media screen and (max-width:550px) {
-    .header-top .site-heading {
-        font-size:1em;
-    }
+.header-top .blue-navbar .exhibit-home {
+    color: white;
+    text-decoration: none;
+    padding-right: 1.875rem;
 }
+.header-top .blue-navbar .site-heading {
+    font-family: proxima-nova, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+  position:relative;
+}
+
+.header-top .blue-navbar .site-heading:before{
+  content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 1.875rem;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    transition: transform .25s cubic-bezier(.45,.05,.55,.95);
+}
+
+.header-top .blue-navbar .site-heading:hover:before{
+  transform:scaleX(1);
+}
+
+.header-top .blue-navbar .exhibit-home a {
+    padding: 5px 10px;
+    background: hsla(0, 0%, 100%, .15);
+    color: #fff;
+    text-decoration: none;
+    font-family: proxima-nova, Helvetica Neue, sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .78px;
+    text-transform: uppercase;
+}
+
+.header-top .blue-navbar .exhibit-home a:hover {
+  border-bottom: 2px solid #fff;
+    margin-bottom: -2px;
+}
+
+.header-top .blue-navbar .exhibit-home a:before {
+  color: #fff;
+    font-style: normal;
+    content: "\21E6";
+    font-size: .75rem;
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width: 700px) {
+  .header-top .blue-navbar {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .header-top .blue-navbar .exhibit-home {
+    width: 100%;
+    padding: 0;
+  }
+
+  .header-top .blue-navbar .exhibit-home a {
+    width: 100%;
+    display: block;
+    font-size: .625rem;
+    letter-spacing: .65px;
+    padding: 0 20px 2px;
+  }
+  .header-top .blue-navbar .exhibit-home a:hover {
+    border-bottom: none;
+      margin-bottom: 0;
+  }
+
+
+  .header-top .blue-navbar .site-heading {
+    padding: 1em 0 1em 20px;
+  }
+
+  .header-top .blue-navbar .site-heading:before{
+      bottom: 15px;
+      left:20px;
+  }
+} 
